@@ -6,7 +6,7 @@ class Callbacks
 
     output Callbacks functions;
 
-    external "C" functions = ModelicaUtilityFunctions_getModelicaUtilityFunctions() annotation (Library={"CallbacksImplementation"});
+    external "C" functions = ModelicaUtilityFunctions_getModelicaUtilityFunctions() annotation(Include="#include \"ModelicaUtilityFunctions.h\"", Library="ModelicaUtilityFunctions");
 
   end constructor;
 
@@ -14,7 +14,7 @@ class Callbacks
 
     input Callbacks functions;
 
-    external "C" ModelicaUtilityFunctions_freeModelicaUtilityFunctions(functions) annotation (Library={"CallbacksImplementation"});
+    external "C" ModelicaUtilityFunctions_freeModelicaUtilityFunctions(functions) annotation(Include="#include \"ModelicaUtilityFunctions.h\"", Library="ModelicaUtilityFunctions");
 
   end destructor;
 

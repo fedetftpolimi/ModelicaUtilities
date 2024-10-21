@@ -4,10 +4,9 @@ class MyExternalObject
 
   function constructor
 
-    input ModelicaUtilities.Callbacks callbacks = ModelicaUtilities.Callbacks();
     output MyExternalObject externalObject;
 
-    external "C" externalObject = MyExternalObject_create(callbacks) annotation (
+    external "C" externalObject = MyExternalObject_create(ModelicaUtilities.callbacks) annotation (
       Library={"MyExternalLibrary"});
 
   end constructor;

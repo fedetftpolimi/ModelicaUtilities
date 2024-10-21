@@ -1,1 +1,6 @@
+CallbacksImplementation/build
+MyExternalLibrary/build
 *.bak-mo
+*.so
+*.dll
+
